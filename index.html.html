@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahavi S - Software Developer</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #0066cc;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 40px 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .skill-tag {
+            background-color: #e6e6e6;
+            padding: 8px 16px;
+            border-radius: 50px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Experience Section */
+        .experience {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-org {
+            font-weight: 600;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-desc {
+            margin-bottom: 10px;
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 50px 0;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .project-desc {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .project-tag {
+            background-color: #e6f2ff;
+            color: #0066cc;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        /* Education Section */
+        .education {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .contact-link {
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        
+        .footer-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="container">
+        <div class="logo">Rahavi S</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="/api/placeholder/150/150" alt="Rahavi S" class="profile-image">
+                <h1>Hello, I'm Rahavi S</h1>
+                <p>A Computer Science and Business Systems graduate with a passion for software development, data analysis, and problem-solving.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a dedicated and highly motivated final-year B.Tech student in Computer Science and Business Systems with a strong foundation in software development, data analysis, and problem-solving.</p>
+                    <p>With experience in data science applications and visualisation projects, I have developed practical skills in data analysis, storytelling through data, and deriving actionable insights. I am passionate about technological innovations and thrive in dynamic environments.</p>
+                    <p>I am currently seeking to leverage my technical skills and industry experience to contribute to innovative projects as part of a Software Development role.</p>
+                </div>
+                <div class="about-skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">3D Modelling</span>
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag">Unity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">October 2023 - December 2023</div>
+                    <div class="timeline-title">Project Trainee</div>
+                    <div class="timeline-org">FIIT</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Conducted extensive data science applications and visualisation projects, culminating in measurable outcomes for the organisation.</li>
+                            <li>Analysed datasets to achieve a 3% improvement in operational metrics through advanced analytical methods.</li>
+                            <li>Strengthened expertise in practical data analysis, storytelling through data, and deriving actionable insights.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-title">Public Relations Member</div>
+                    <div class="timeline-org">Techsparks Club (RIT)</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Organised and executed technical events monthly, enhancing communication and coordination skills.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - Present</div>
+                    <div class="timeline-title">Member</div>
+                    <div class="timeline-org">ARVR Club (RIT)</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Developed 3D models for virtual environments and collaborated on a virtual showroom design.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Price Prediction System" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Price-Prediction System for Indian Agri-Commodities</h3>
+                        <p class="project-desc">Developing a robust model to predict volatile agri-commodity prices affected by weather changes and government policies. Implementing frontend with FlaskAPI and backend with PostgreSQL and Python ML libraries.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">PostgreSQL</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Data Analytics Project" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Data Analytics for Maruti Suzuki Service</h3>
+                        <p class="project-desc">Collaborated with a team to analyze 23MB of service center data and provided actionable insights that improved service efficiency by 3%. Applied machine learning models and data visualization techniques.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Earthquake Data Analysis" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Earthquake Data Analysis</h3>
+                        <p class="project-desc">Conducted comprehensive analysis of earthquake patterns using datasets from Kaggle (2.2MB). Evaluated predictive models to assess future trends and improved prediction accuracy.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">Predictive Modeling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">August 2021 - Present</div>
+                    <div class="timeline-title">B.Tech. in Computer Science and Business Systems</div>
+                    <div class="timeline-org">Rajalakshmi Institute of Technology (Autonomous), Chennai</div>
+                    <div class="timeline-desc">CGPA: 7.94/10 (till Semester 7)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2018 - May 2021</div>
+                    <div class="timeline-title">Senior Secondary and Higher Secondary Education</div>
+                    <div class="timeline-org">Sri Vidhya Academy International Residential Academy (CBSE), Poonamallee</div>
+                    <div class="timeline-desc">HSC: 81.4% | SSC: 87%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2025 - Present</div>
+                    <div class="timeline-title">Diploma in Programming</div>
+                    <div class="timeline-org">Indian Institute of Technology Madras (online)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2024</div>
+                    <div class="timeline-title">Developing AI Applications with Python and Flask</div>
+                    <div class="timeline-org">IBM Applied AI (Coursera)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">September 2023</div>
+                    <div class="timeline-title">Deep Learning & Learning Analytics Tools</div>
+                    <div class="timeline-org">NPTEL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>Feel free to reach out if you'd like to collaborate or learn more about my work.</p>
+            <div class="contact-links">
+                <a href="mailto:rahavisrose@gmail.com" class="contact-link">Email</a>
+                <a href="https://github.com/rahavi-r31" target="_blank" class="contact-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/rahavi-s-671a76224" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="tel:+918838487634" class="contact-link">Phone</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 Rahavi S. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
