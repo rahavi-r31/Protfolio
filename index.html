@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahavi S - Student</title>
+    <title>Rahavi S - Data Analyst & AI Engineer</title>
     <style>
         /* Reset and Base Styles */
         * {
@@ -168,6 +168,21 @@
         .timeline-desc {
             margin-bottom: 10px;
         }
+
+        .timeline-desc ul {
+            padding-left: 20px;
+        }
+
+        .timeline-desc ul li {
+            margin-bottom: 8px;
+        }
+
+        .timeline-relevance {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
         
         /* Projects Section */
         .projects {
@@ -197,6 +212,7 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            background-color: #e6f2ff;
         }
         
         .project-content {
@@ -213,6 +229,13 @@
             color: #666;
             margin-bottom: 15px;
         }
+
+        .project-relevance {
+            font-style: italic;
+            color: #0066cc;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
         
         .project-tags {
             display: flex;
@@ -227,6 +250,16 @@
             font-size: 0.8rem;
             margin-right: 8px;
             margin-bottom: 8px;
+        }
+
+        .project-status {
+            display: inline-block;
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
         }
         
         /* Education Section */
@@ -263,6 +296,20 @@
         .footer-text {
             color: #666;
             font-size: 0.9rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background-color: #e6f2ff;
+            border-left: 4px solid #0066cc;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h4 {
+            color: #0066cc;
+            margin-bottom: 8px;
         }
         
         /* Responsive Design */
@@ -310,7 +357,7 @@
             <div class="hero-content">
                 <img src="profile picture.jpg" alt="Rahavi S" class="profile-image">
                 <h1>Hello, I'm Rahavi S</h1>
-                <p>A Computer Science and Business Systems graduate with a passion for software development, data analysis, and problem-solving.</p>
+                <p>Data Analyst & AI Engineer with expertise in Machine Learning, Predictive Analytics, and Business Intelligence. Passionate about transforming complex data into actionable insights.</p>
             </div>
         </div>
     </section>
@@ -321,24 +368,36 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a dedicated and highly motivated final-year B.Tech student in Computer Science and Business Systems with a strong foundation in software development, data analysis, and problem-solving.</p>
-                    <p>With experience in data science applications and visualisation projects, I have developed practical skills in data analysis, storytelling through data, and deriving actionable insights. I am passionate about technological innovations and thrive in dynamic environments.</p>
-                    <p>I am currently seeking to leverage my technical skills and industry experience to contribute to innovative projects as part of a Software Development and Data Analyst roles.</p>
+                    <p>I'm a B.Tech graduate in Computer Science and Business Systems with hands-on experience in Machine Learning, Predictive Analytics, and AI-powered business solutions.</p>
+                    <p>Currently working as a Data Analytics Intern at Exporter.AI, where I build forecasting models, develop customer segmentation strategies, and create dashboards that translate complex trade data into actionable insights.</p>
+                    <p>I'm skilled at bridging the gap between technical analysis and business strategy — whether it's building LSTM models for price prediction or applying Margin-Market Matrix frameworks for customer prioritization.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>What I Bring</h4>
+                        <p>A unique blend of technical depth (ML, data systems) and business acumen (strategy, operations, analytics) — the core of my CSBS degree.</p>
+                    </div>
                 </div>
                 <div class="about-skills">
                     <h3>Technical Skills</h3>
                     <div class="skills">
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">Django</span>
                         <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Flask</span>
                         <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Data Structures</span>
-                        <span class="skill-tag">Algorithms</span>
                         <span class="skill-tag">Machine Learning</span>
                         <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">ARIMA</span>
+                        <span class="skill-tag">CatBoost</span>
+                        <span class="skill-tag">LSTM/GRU</span>
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">RapidFuzz</span>
+                        <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">EDA</span>
+                        <span class="skill-tag">Demand Forecasting</span>
+                        <span class="skill-tag">Customer Segmentation</span>
                     </div>
                 </div>
             </div>
@@ -351,14 +410,29 @@
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
+                    <div class="timeline-date">May 2025 - Present</div>
+                    <div class="timeline-title">Data Analytics Intern</div>
+                    <div class="timeline-org">Exporter.AI, Chennai</div>
+                    <div class="timeline-desc">
+                        <p style="margin-bottom: 15px; color: #666; font-style: italic;">A trade-tech startup providing AI-powered analytics for exporters and importers.</p>
+                        <ul>
+                            <li>Performed exploratory data analysis on 5+ years of export-import transaction data to uncover trade patterns, demand trends, and supply chain inefficiencies.</li>
+                            <li>Developed <strong>customer segmentation using Margin-Market Matrix</strong> — categorizing customers by profitability (high/low margin) and market type (new vs existing) to prioritize sales efforts and growth strategies.</li>
+                            <li>Built <strong>predictive models</strong> (ARIMA, CatBoost) for demand forecasting and market trend prediction.</li>
+                            <li>Cleaned and normalized complex datasets (10K+ records) — standardizing units, resolving name inconsistencies using fuzzy matching (RapidFuzz).</li>
+                            <li>Developed interactive <strong>dashboards in Tableau and Python</strong> for visualizing trade flows, customer profitability, and performance metrics.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
                     <div class="timeline-date">October 2023 - December 2023</div>
                     <div class="timeline-title">Project Trainee</div>
-                    <div class="timeline-org">FIIT</div>
+                    <div class="timeline-org">FIIT (Capgemini Client Project)</div>
                     <div class="timeline-desc">
                         <ul>
-                            <li>Conducted extensive data science applications and visualisation projects, culminating in measurable outcomes for the organisation.</li>
-                            <li>Analysed datasets to achieve a 3% improvement in operational metrics through advanced analytical methods.</li>
-                            <li>Strengthened expertise in practical data analysis, storytelling through data, and deriving actionable insights.</li>
+                            <li>Analyzed 1 year of Maruti Suzuki service center data (20,000+ records) tracking vehicle check-in/check-out times, service types, and expected vs actual retrieval dates.</li>
+                            <li>Identified turnaround time bottlenecks and service delays, improving operational efficiency metrics by 3%.</li>
+                            <li>Built dashboards to visualize service center throughput, delay patterns, and resource utilization.</li>
                         </ul>
                     </div>
                 </div>
@@ -374,38 +448,48 @@
                 <div class="project-card">
                     <img src="Agri-Commodity Price Prediction.png" alt="Price Prediction System" class="project-image">
                     <div class="project-content">
-                        <h3 class="project-title">Price-Prediction System for Indian Agri-Commodities</h3>
-                        <p class="project-desc">Developing a robust model to predict volatile agri-commodity prices affected by weather changes and government policies. Implementing frontend with FlaskAPI and backend with PostgreSQL and Python ML libraries.</p>
+                        <h3 class="project-title">Price Prediction System for Indian Agricultural Commodities</h3>
+                        <p class="project-desc">Developed a hybrid DIA-LSTM + GRU deep learning model achieving 93% accuracy for weather-influenced commodity price prediction. Enabled data-driven inventory planning and risk analysis.</p>
+                        <p class="project-relevance">Relevance: Directly applicable to supply chain demand forecasting and inventory optimization.</p>
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
+                            <span class="project-tag">TensorFlow</span>
                             <span class="project-tag">Flask</span>
-                            <span class="project-tag">PostgreSQL</span>
-                            <span class="project-tag">Machine Learning</span>
-                            <span class="project-tag">Tableau</span>
+                            <span class="project-tag">LSTM</span>
+                            <span class="project-tag">GRU</span>
+                            <span class="project-tag">Deep Learning</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="Car Services.jpg" alt="Data Analytics Project" class="project-image">
                     <div class="project-content">
-                        <h3 class="project-title">Data Analytics for Maruti Suzuki Service</h3>
-                        <p class="project-desc">Collaborated with a team to analyze Big Data of service center and provided actionable insights to improve services. Applied data visualization techniques.</p>
+                        <h3 class="project-title">Service Center Analytics for Maruti Suzuki</h3>
+                        <p class="project-desc">Analyzed 1 year of service center data (20,000+ records) tracking vehicle check-in/check-out times, service types, and expected vs actual retrieval dates. Identified turnaround time bottlenecks and improved efficiency by 3%.</p>
+                        <p class="project-relevance">Relevance: Operational efficiency analysis — same approach applies to manufacturing floor optimization.</p>
                         <div class="project-tags">
                             <span class="project-tag">Data Analysis</span>
                             <span class="project-tag">Tableau</span>
-                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Operations Analytics</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="Earthquake Analytics.png" alt="Earthquake Data Analysis" class="project-image">
+                    <div class="project-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span style="color: white; font-size: 3rem;">📊</span>
+                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">Earthquake Data Analysis</h3>
-                        <p class="project-desc">Conducted comprehensive analysis of earthquake patterns using datasets from Kaggle. Evaluated predictive models to assess future trends and improved prediction accuracy.</p>
+                        <span class="project-status">Ongoing</span>
+                        <h3 class="project-title">Mutual Fund Portfolio Analyzer</h3>
+                        <p class="project-desc">Building a full-stack app that simplifies mutual fund tracking — consolidating scattered data into one clear report showing if a portfolio aligns with user goals. Uses Gemini AI to generate personalized recommendations (hold, switch, rebalance).</p>
+                        <p class="project-relevance">Relevance: Translating complex data into actionable insights — same skill needed for simplifying reports for non-technical stakeholders.</p>
                         <div class="project-tags">
+                            <span class="project-tag">React</span>
                             <span class="project-tag">Python</span>
-                            <span class="project-tag">Data Analysis</span>
-                            <span class="project-tag">Predictive Modeling</span>
+                            <span class="project-tag">REST APIs</span>
+                            <span class="project-tag">Gemini API</span>
+                            <span class="project-tag">Full Stack</span>
                         </div>
                     </div>
                 </div>
@@ -419,15 +503,29 @@
             <h2 class="section-title">Education</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">August 2021 - Present</div>
-                    <div class="timeline-title">B.Tech. in Computer Science and Business Systems</div>
+                    <div class="timeline-date">June 2025 - Present</div>
+                    <div class="timeline-title">Diploma in Programming</div>
+                    <div class="timeline-org">Indian Institute of Technology, Madras</div>
+                    <div class="timeline-desc">CGPA: 7.23</div>
+                    <p class="timeline-relevance">Relevance: Python, data structures, and algorithmic thinking for building scalable analytics solutions.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">December 2025 - Present</div>
+                    <div class="timeline-title">Executive Certification in Supply Chain Management Data + AI</div>
+                    <div class="timeline-org">Confederation of Indian Industry (CII) & CODE IIT Madras</div>
+                    <p class="timeline-relevance">Relevance: AI/ML applications in supply chain — demand forecasting, inventory optimization, logistics analytics.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">August 2021 - July 2025</div>
+                    <div class="timeline-title">B.Tech in Computer Science and Business Systems</div>
                     <div class="timeline-org">Rajalakshmi Institute of Technology (Autonomous), Chennai</div>
-                    <div class="timeline-desc">CGPA: 7.94/10 (till Semester 7)</div>
+                    <div class="timeline-desc">CGPA: 8.07</div>
+                    <p class="timeline-relevance">Relevance: Blend of technical (ML, data systems) and business skills (strategy, operations, analytics).</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">June 2018 - May 2021</div>
-                    <div class="timeline-title">Senior Secondary and Higher Secondary Education</div>
-                    <div class="timeline-org">Sri Vidhya Academy International Residential Academy (CBSE), Poonamallee</div>
+                    <div class="timeline-title">Senior Secondary & Higher Secondary (CBSE)</div>
+                    <div class="timeline-org">Sri Vidhya Academy International Residential Academy, Poonamallee</div>
                     <div class="timeline-desc">HSC: 81.4% | SSC: 87%</div>
                 </div>
             </div>
@@ -440,19 +538,44 @@
             <h2 class="section-title">Certifications</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">June 2025 - Present</div>
-                    <div class="timeline-title">Diploma in Programming</div>
-                    <div class="timeline-org">Indian Institute of Technology Madras (online)</div>
-                </div>
-                <div class="timeline-item">
                     <div class="timeline-date">July 2024</div>
                     <div class="timeline-title">Developing AI Applications with Python and Flask</div>
                     <div class="timeline-org">IBM Applied AI (Coursera)</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">September 2023</div>
-                    <div class="timeline-title">Deep Learning & Learning Analytics Tools</div>
+                    <div class="timeline-title">Deep Learning</div>
                     <div class="timeline-org">NPTEL</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">September 2023</div>
+                    <div class="timeline-title">Learning Analytics Tools</div>
+                    <div class="timeline-org">NPTEL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section class="about" id="strengths">
+        <div class="container">
+            <h2 class="section-title">Key Strengths</h2>
+            <div class="project-grid">
+                <div class="highlight-box" style="background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h4>Business Strategy Acumen</h4>
+                    <p>Applied Margin-Market Segmentation Matrix to classify customers by profitability and market type — enabling targeted growth and retention strategies.</p>
+                </div>
+                <div class="highlight-box" style="background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h4>Demand Forecasting</h4>
+                    <p>Experience building time-series models (ARIMA, LSTM) for predicting commodity prices — transferable to inventory and production forecasting.</p>
+                </div>
+                <div class="highlight-box" style="background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h4>Large Dataset Handling</h4>
+                    <p>Processed 5+ years of messy transaction data; skilled at cleaning, normalizing, and extracting insights at scale.</p>
+                </div>
+                <div class="highlight-box" style="background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h4>Operational Optimization</h4>
+                    <p>Identified efficiency improvements in service operations (Maruti Suzuki project) through data-driven analysis.</p>
                 </div>
             </div>
         </div>
@@ -462,11 +585,11 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <p>Feel free to reach out if you'd like to collaborate or learn more about my work.</p>
+            <p>Open to opportunities in Data Analytics, Data Science, and AI Engineering roles.</p>
             <div class="contact-links">
-                <a href="mailto:rahavisrose@gmail.com" class="contact-link">Email</a>
-                <a href="https://github.com/rahavi-r31" target="_blank" class="contact-link">GitHub</a>
-                <a href="https://www.linkedin.com/in/rahavi-s-671a76224" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="mailto:rahavisrose@gmail.com" class="contact-link">📧 Email</a>
+                <a href="https://github.com/rahavi-r31" target="_blank" class="contact-link">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/rahavi-s-671a76224" target="_blank" class="contact-link">🔗 LinkedIn</a>
             </div>
         </div>
     </section>
@@ -474,7 +597,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-text"></p>
+            <p class="footer-text">© 2025 Rahavi S. Built with passion for data and design.</p>
         </div>
     </footer>
 </body>
