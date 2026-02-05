@@ -373,7 +373,7 @@ export default function Portfolio() {
       link: 'https://github.com/rahavi-r31/Price-prediction-for-agri-commodities-',
     },
     {
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+      image: 'https://i.pinimg.com/1200x/5d/e4/ab/5de4abe9dd4f81a4529911fd4e189348.jpg',
       title: 'Service Analytics for Maruti Suzuki',
       description: 'Analyzed 1 year of service center data (20,000+ records) tracking vehicle operations. Identified turnaround time bottlenecks and improved efficiency by 3%.',
       relevance: 'Operational efficiency analysis — applicable to manufacturing floor optimization.',
