@@ -123,6 +123,7 @@ const SkillsMarquee = ({ skills }) => {
 // Bento Grid Card Component
 const BentoCard = ({ children, span = 1, rowSpan = 1, color = '#fff', hoverColor = '#092f33', style = {} }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const isDarkBg = style.background === '#4b5b34' || style.background === '#092f33';
   
   return (
     <div
@@ -131,7 +132,7 @@ const BentoCard = ({ children, span = 1, rowSpan = 1, color = '#fff', hoverColor
       style={{
         gridColumn: `span ${span}`,
         gridRow: `span ${rowSpan}`,
-        background: isHovered ? hoverColor : color,
+        background: isHovered ? hoverColor : (style.background || color),
         borderRadius: '24px',
         padding: '30px',
         transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -140,13 +141,22 @@ const BentoCard = ({ children, span = 1, rowSpan = 1, color = '#fff', hoverColor
         overflow: 'hidden',
         position: 'relative',
         ...style,
+        background: isHovered ? hoverColor : (style.background || color),
       }}
     >
       <div style={{
         transition: 'all 0.5s ease',
-        filter: isHovered ? 'invert(1)' : 'invert(0)',
+        filter: (isDarkBg || style.background === '#980204' || style.background === '#af5031') ? 'none' : (isHovered ? 'invert(1)' : 'invert(0)'),
+        color: isHovered && isDarkBg ? '#fff' : undefined,
       }}>
-        {children}
+        {React.Children.map(children, child => {
+          if (React.isValidElement(child) && isHovered && isDarkBg) {
+            return React.cloneElement(child, {
+              style: { ...child.props.style, color: '#fff' }
+            });
+          }
+          return child;
+        })}
       </div>
     </div>
   );
@@ -371,7 +381,7 @@ export default function Portfolio() {
       link: null,
     },
     {
-      image: 'https://i.pinimg.com/736x/ef/0f/05/ef0f0539afcfa6d9cd0c29efe38894cb.jpg',
+      image: 'https://i.pinimg.com/1200x/a1/31/3f/a1313f0b881ed05d2aee4ec1e75d3832.jpg',
       title: 'Mutual Fund Portfolio Analyzer',
       description: 'Building a full-stack app that simplifies mutual fund tracking — consolidating scattered data into one clear report. Uses Gemini AI for personalized recommendations.',
       relevance: 'Translating complex data into actionable insights for non-technical stakeholders.',
@@ -500,7 +510,6 @@ export default function Portfolio() {
             width: '250px',
             height: '250px',
             margin: '0 auto 50px',
-            animation: 'float 6s ease-in-out infinite',
           }}>
             <div style={{
               position: 'absolute',
@@ -564,7 +573,7 @@ export default function Portfolio() {
             animation: 'fadeIn 1s ease 0.7s both',
           }}>
             Transforming complex data into stories that drive decisions. 
-            Passionate about the intersection of <span style={{ color: '#980204', fontStyle: 'italic' }}>machine learning</span> and <span style={{ color: '#980204', fontStyle: 'italic' }}>business strategy</span>.
+            Passionate about the intersection of <span style={{ color: '#980204', fontStyle: 'italic' }}>machine learning</span>, <span style={{ color: '#980204', fontStyle: 'italic' }}>web development</span>, and <span style={{ color: '#980204', fontStyle: 'italic' }}>business strategy</span>.
           </p>
           
           <div style={{
@@ -620,50 +629,14 @@ export default function Portfolio() {
           </div>
         </div>
         
-        {/* Scroll Indicator */}
-        <div style={{
-          position: 'absolute',
-          bottom: '40px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '10px',
-          animation: 'bounce 2s infinite',
-        }}>
-          <span style={{
-            fontFamily: "'Space Mono', monospace",
-            fontSize: '0.7rem',
-            color: '#4b5b34',
-            textTransform: 'uppercase',
-            letterSpacing: '3px',
-          }}>
-            Scroll
-          </span>
-          <div style={{
-            width: '2px',
-            height: '40px',
-            background: 'linear-gradient(to bottom, #4b5b34, transparent)',
-          }} />
-        </div>
-        
         <style>{`
           @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
           }
-          @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-          }
           @keyframes pulse {
             0%, 100% { transform: scale(1); opacity: 0.3; }
             50% { transform: scale(1.05); opacity: 0.5; }
-          }
-          @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
           }
         `}</style>
       </section>
@@ -757,7 +730,7 @@ export default function Portfolio() {
             </p>
           </BentoCard>
           
-          <BentoCard span={2} style={{ background: '#4b5b34' }}>
+          <BentoCard span={2} style={{ background: '#4b5b34' }} hoverColor="#2a3520">
             <h3 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: '1.3rem',
@@ -775,7 +748,7 @@ export default function Portfolio() {
             </p>
           </BentoCard>
           
-          <BentoCard span={2} style={{ background: '#092f33' }}>
+          <BentoCard span={2} style={{ background: '#092f33' }} hoverColor="#061a1c">
             <h3 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: '1.3rem',
@@ -820,6 +793,7 @@ export default function Portfolio() {
               gridTemplateColumns: '200px 1fr',
               gap: '40px',
               position: 'relative',
+              marginBottom: '60px',
             }}>
               <div>
                 <p style={{
@@ -1064,7 +1038,7 @@ export default function Portfolio() {
             marginBottom: '50px',
             lineHeight: '1.8',
           }}>
-            Open to opportunities in Software Development, Data Analytics, Data Science, and AI Engineering. 
+            Open to opportunities in Data Analytics, Data Science, and AI Engineering. 
             Let's create something meaningful together.
           </p>
           
