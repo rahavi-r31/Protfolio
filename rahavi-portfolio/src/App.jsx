@@ -355,7 +355,7 @@ export default function Portfolio() {
 
   const projects = [
     {
-      image: '/Agri-Commodity Price Prediction.png',
+      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800',
       title: 'Agricultural Price Prediction System',
       description: 'Developed a hybrid DIA-LSTM + GRU deep learning model achieving 93% accuracy for weather-influenced commodity price prediction. Enabled data-driven inventory planning and risk analysis.',
       relevance: 'Directly applicable to supply chain demand forecasting and inventory optimization.',
@@ -363,7 +363,7 @@ export default function Portfolio() {
       link: 'https://github.com/rahavi-r31/Price-prediction-for-agri-commodities-',
     },
     {
-      image: '/Car Services.jpg',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
       title: 'Service Analytics for Maruti Suzuki',
       description: 'Analyzed 1 year of service center data (20,000+ records) tracking vehicle operations. Identified turnaround time bottlenecks and improved efficiency by 3%.',
       relevance: 'Operational efficiency analysis — applicable to manufacturing floor optimization.',
@@ -391,6 +391,17 @@ export default function Portfolio() {
         'Developed Margin-Market Matrix for customer segmentation',
         'Built predictive models (ARIMA, CatBoost) for forecasting',
         'Created interactive Tableau & Python dashboards',
+      ],
+    },
+    {
+      date: 'June 2025 - Present',
+      title: 'Web Development Projects',
+      company: 'IIT Madras Diploma in Programming',
+      points: [
+        'Built full-stack web applications using Python Flask framework',
+        'Developed interactive frontends with JavaScript and modern ES6+ features',
+        'Created RESTful APIs and integrated with SQL databases',
+        'Implemented user authentication, session management, and CRUD operations',
       ],
     },
   ];
@@ -506,7 +517,7 @@ export default function Portfolio() {
               borderRadius: '50%',
             }} />
             <img
-              src="/profile picture.jpg"
+              src="profile picture.jpg"
               alt="Rahavi S"
               style={{
                 width: '100%',
@@ -779,7 +790,7 @@ export default function Portfolio() {
               color: '#e4cba9',
               lineHeight: '1.7',
             }}>
-              Python • SQL • React • Machine Learning • Deep Learning • Tableau • ARIMA • CatBoost • LSTM • pandas • Demand Forecasting
+              Python • Flask • JavaScript • SQL • React • Machine Learning • Deep Learning • Tableau • ARIMA • CatBoost • LSTM • pandas • Demand Forecasting
             </p>
           </BentoCard>
         </div>
@@ -1053,7 +1064,7 @@ export default function Portfolio() {
             marginBottom: '50px',
             lineHeight: '1.8',
           }}>
-            Open to opportunities in Data Analytics, Data Science, and AI Engineering. 
+            Open to opportunities in Software Development, Data Analytics, Data Science, and AI Engineering. 
             Let's create something meaningful together.
           </p>
           
